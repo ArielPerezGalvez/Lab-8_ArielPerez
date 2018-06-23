@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import jdk.nashorn.internal.scripts.JO;
 
 public class Gerente extends javax.swing.JFrame {
@@ -44,15 +45,32 @@ public class Gerente extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        arbolito = new javax.swing.JTree();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel7 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        arbolito = new javax.swing.JTree();
+        combito = new javax.swing.JComboBox<>();
+        jLabel19 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -239,16 +257,21 @@ public class Gerente extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(240, 240, 240));
         jLabel12.setText("Organigrama de la empresa");
 
-        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Gerente General");
-        arbolito.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(arbolito);
-
         jButton4.setText("Regresar");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton4MouseClicked(evt);
             }
         });
+
+        jButton6.setText("Mostrar todo");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        jLabel13.setText("Organizacion");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -260,15 +283,17 @@ public class Gerente extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addComponent(jLabel12)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 125, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(jButton4)
                         .addGap(19, 19, 19))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(66, Short.MAX_VALUE))))
+                        .addGap(76, 76, 76)
+                        .addComponent(jButton6)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel13)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,9 +301,11 @@ public class Gerente extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGap(227, 227, 227)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton6)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addContainerGap())
         );
@@ -291,7 +318,7 @@ public class Gerente extends javax.swing.JFrame {
         );
         mostrar_organigramaLayout.setVerticalGroup(
             mostrar_organigramaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -315,6 +342,14 @@ public class Gerente extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reunion_icono.png"))); // NOI18N
+
         jButton1.setText("Agregar al organigrama");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -322,14 +357,147 @@ public class Gerente extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reunion_icono.png"))); // NOI18N
-
         jButton3.setText("Mostrar organigrama de la empresa");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(52, 52, 52))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jButton1)
+                        .addGap(54, 54, 54)
+                        .addComponent(jButton3))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jLabel11)))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Organigrama", jPanel7);
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Gerente General");
+        arbolito.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane2.setViewportView(arbolito);
+
+        combito.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                combitoItemStateChanged(evt);
+            }
+        });
+
+        jLabel19.setText("Añadidos");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(113, Short.MAX_VALUE)
+                .addComponent(jLabel19)
+                .addGap(43, 43, 43)
+                .addComponent(combito, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(176, 176, 176))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(33, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(combito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
+        );
+
+        jTabbedPane1.addTab("Mostrar el arbol", jPanel8);
+
+        jLabel15.setText("De");
+
+        jLabel16.setText("Para");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel17.setText("Mensaje");
+
+        jLabel18.setText("Broadcast");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jLabel16))
+                                .addGap(43, 43, 43)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBox2, 0, 110, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel18))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
+        );
+
+        jTabbedPane1.addTab("Enviar mensaje", jPanel9);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -340,16 +508,12 @@ public class Gerente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(122, 122, 122)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel11))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jButton1)
-                        .addGap(89, 89, 89)
-                        .addComponent(jButton3)))
-                .addContainerGap(119, Short.MAX_VALUE))
+                        .addGap(33, 33, 33)
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(53, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,13 +521,9 @@ public class Gerente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(46, 46, 46)
-                .addComponent(jLabel11)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -374,7 +534,9 @@ public class Gerente extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -391,6 +553,9 @@ public class Gerente extends javax.swing.JFrame {
             DefaultComboBoxModel modelo = (DefaultComboBoxModel) combo_jefe.getModel();
             modelo.addElement(temp);
             combo_jefe.setModel(modelo);
+            DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) combito.getModel();
+            modelo2.addElement(temp);
+            combito.setModel(modelo2);
             nuevo_empleado.setVisible(false);
             nombre.setText("");
             id.setText("");
@@ -416,68 +581,146 @@ public class Gerente extends javax.swing.JFrame {
         mostrar_organigrama.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        mostrar_organigrama.setTitle("Organigrama de la empresa");
-        mostrar_organigrama.setModal(true);
-        mostrar_organigrama.pack();
-        mostrar_organigrama.setLocationRelativeTo(this);
-        mostrar_organigrama.setVisible(true);
-                Empleado temp;
-        String mal = jefes.getText();
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        Empleado temp;
+        String mat = jefes.getText();
         DefaultComboBoxModel modelo = (DefaultComboBoxModel) combo_jefe.getModel();
         if (modelo.getSelectedItem() instanceof Jefe) {
-            Jefe pa = mayores.get(mayores.indexOf((Jefe) modelo.getSelectedItem()));
-            temp = new Empleado(pa, mal);
-            pa.getJefes().add(temp);
+            Jefe padre = mayores.get(mayores.indexOf((Jefe) modelo.getSelectedItem()));
+            temp = new Empleado(padre, mat);
+            padre.getJefes().add(temp);
             modelo.addElement(temp);
         } else {
-            Empleado padr = (Empleado) modelo.getSelectedItem();
-            temp = new Empleado(padr, mal);
-            padr.getHijos().add(temp);
+            Empleado padre = (Empleado) modelo.getSelectedItem();
+            temp = new Empleado(padre, mat);
+            padre.getHijos().add(temp);
             modelo.addElement(temp);
         }
         combo_jefe.setModel(modelo);
-        
-        
-        
-        
-    }//GEN-LAST:event_jButton3MouseClicked
 
-    public void llevar_arbol(Object p_raiz, DefaultMutableTreeNode nodo) {
+        if (mayores.size() > 0) {
+            Empleado tem = menores.get(0);
+            DefaultTreeModel m = (DefaultTreeModel) arbolito.getModel();
+            m.setRoot(new DefaultMutableTreeNode(temp));
+            llevar(tem, (DefaultMutableTreeNode) m.getRoot());
+
+        }
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        // TODO add your handling code here:
         try {
-            if (p_raiz instanceof Jefe) {
-                for (Empleado p : ((Jefe) p_raiz).getJefes()) {
-
-                    if (p.getHijos().isEmpty()) {
-                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p);
-                        nodo.add(n);
-                    } else {
-                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p);
-                        nodo.add(n);
-                        llevar_arbol(p, n);
-                    }
+            if (jTabbedPane1.getSelectedIndex() == 1) {
+                if (mayores.size() > 0) {
+                    Empleado temp = menores.get(0);
+                    System.out.println(temp.toString());
+                    DefaultTreeModel m = (DefaultTreeModel) arbolito.getModel();
+                    m.setRoot(new DefaultMutableTreeNode(temp));
+                    llevar(temp, (DefaultMutableTreeNode) m.getRoot());
+                    m.reload();
                 }
+            }
+        } catch (Exception e) {
+
+        }
+
+
+    }//GEN-LAST:event_jTabbedPane1StateChanged
+
+    private void combitoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combitoItemStateChanged
+        // TODO add your handling code here:
+        try {
+            if (evt.getStateChange() > 0) {
+                Empleado temp = (Empleado) combito.getSelectedItem();
+                DefaultTreeModel m = (DefaultTreeModel) arbolito.getModel();
+                m.setRoot(new DefaultMutableTreeNode(temp));
+                llevar(temp, (DefaultMutableTreeNode) m.getRoot());
+            }
+        } catch (Exception e) {
+
+        }
+
+    }//GEN-LAST:event_combitoItemStateChanged
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        try {
+            Empleado temp;
+            String mat = jefes.getText();
+            DefaultComboBoxModel modelo = (DefaultComboBoxModel) combito.getModel();
+            if (modelo.getSelectedItem() instanceof Jefe) {
+                Jefe padre = mayores.get(mayores.indexOf((Jefe) modelo.getSelectedItem()));
+                temp = new Empleado(padre, mat);
+                padre.getJefes().add(temp);
+                modelo.addElement(temp);
             } else {
+                Empleado padre = (Empleado) modelo.getSelectedItem();
+                temp = new Empleado(padre, mat);
+                padre.getHijos().add(temp);
+                modelo.addElement(temp);
+            }
+            combito.setModel(modelo);
+        } catch (Exception e) {
 
-                for (Empleado p2 : ((Empleado) p_raiz).getHijos()) {
-                    if (p2.getHijos().isEmpty()) {
-                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p2);
-                        nodo.add(n);
-                    } else {
-                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p2);
-                        nodo.add(n);
-                        llevar_arbol(p2, n);
-                    }
+        }
 
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    public void llevar(Empleado raiz, DefaultMutableTreeNode nodo) {
+        try {
+            ArrayList<Empleado> primero = new ArrayList();
+            for (Empleado emp : primero) {
+                if (emp.getHijos().isEmpty()) {
+                    DefaultMutableTreeNode n = new DefaultMutableTreeNode(emp);
+                    nodo.add(n);
+
+                } else {
+                    DefaultMutableTreeNode n = new DefaultMutableTreeNode();
+                    nodo.add(n);
+                    llevar(emp, n);
                 }
 
             }
+
         } catch (Exception e) {
-            e.printStackTrace();
         }
+
+        /*  try {
+        f
+        
+        
+        
+            if (p_raiz instanceof Jefe) {
+                for (Empleado p : ((Jefe) p_raiz).getJefes()) {
+                    if (p.getHijos().isEmpty()) {
+                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p.toString());
+                        nodo.add(n);
+                        
+                        System.out.println(p.toString());
+                    } else {
+                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p.getNombre());
+                        nodo.add(n);
+                        llevar(p, n);
+                        
+                    }
+                }
+            } else {
+                for (Empleado p2 : ((Empleado) p_raiz).getHijos()) {
+                    if (p2.getHijos().isEmpty()) {
+                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p2.getNombre());
+                        nodo.add(n);
+                    } else {
+                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(p2.getNombre());
+                        nodo.add(n);
+                        llevar(p2, n);
+                    }
+                }
+            }
+        } catch (Exception e) {
+        }*/
     }
-    
-    
+
     /**
      * @param args the command line arguments
      */
@@ -515,6 +758,7 @@ public class Gerente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolito;
+    private javax.swing.JComboBox<String> combito;
     private javax.swing.JComboBox<String> combo_jefe;
     private javax.swing.JPasswordField contra;
     private javax.swing.JTextField empresa;
@@ -523,10 +767,20 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -541,7 +795,13 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jefes;
     private javax.swing.JDialog mostrar_organigrama;
     private javax.swing.JTextField nombre;
@@ -551,6 +811,6 @@ public class Gerente extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 String vacio = "";
     ArrayList<Jefe> mayores = new ArrayList();
-    ArrayList<Empleado> menores= new ArrayList();
+    ArrayList<Empleado> menores = new ArrayList();
 
 }
