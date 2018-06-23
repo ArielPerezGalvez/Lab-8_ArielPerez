@@ -549,22 +549,24 @@ public class Gerente extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        DefaultTreeModel modelo = (DefaultTreeModel) arbolito.getModel();
         try {
-            DefaultTreeModel modelo = (DefaultTreeModel) arbolito.getModel();
+            
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
             for (Jefe mayore : mayores) {
-                DefaultMutableTreeNode rai = new DefaultMutableTreeNode();
+                DefaultMutableTreeNode rai = new DefaultMutableTreeNode(mayore);
                 for (Empleado mayore1 : menores) {
-                    DefaultMutableTreeNode m = new DefaultMutableTreeNode();
+                    DefaultMutableTreeNode m = new DefaultMutableTreeNode(mayore1);
                     if (mayore1.getPadre() == mayore.getNombre()) {
+                        System.out.println("entre a agregar el padre al hijo");
                         rai.add(m);
                         raiz.add(rai);
-                        modelo.reload();
-
                     }
                 }
 
             }
+            
+            
             /*Empleado temp;
             String mat = jefes.getText();
             DefaultComboBoxModel modelo = (DefaultComboBoxModel) combito.getModel();
@@ -583,6 +585,8 @@ public class Gerente extends javax.swing.JFrame {
         } catch (Exception e) {
 
         }
+        
+        modelo.reload();
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
