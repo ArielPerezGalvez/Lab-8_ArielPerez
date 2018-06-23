@@ -41,13 +41,6 @@ public class Gerente extends javax.swing.JFrame {
         contra = new javax.swing.JPasswordField();
         combo_jefe = new javax.swing.JComboBox<>();
         jefes = new javax.swing.JTextField();
-        mostrar_organigrama = new javax.swing.JDialog();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -63,14 +56,15 @@ public class Gerente extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        combo12 = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        combo13 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        mensaje = new javax.swing.JTextArea();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
+        jButton5 = new javax.swing.JButton();
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -238,89 +232,6 @@ public class Gerente extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
-
-        jPanel6.setBackground(new java.awt.Color(102, 102, 102));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel12.setText("Organigrama de la empresa");
-
-        jButton4.setText("Regresar");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
-            }
-        });
-
-        jButton6.setText("Mostrar todo");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
-            }
-        });
-
-        jLabel13.setText("Organizacion");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel12)
-                        .addGap(0, 125, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addComponent(jButton4)
-                        .addGap(19, 19, 19))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jButton6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel13)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addGap(227, 227, 227)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jLabel13))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout mostrar_organigramaLayout = new javax.swing.GroupLayout(mostrar_organigrama.getContentPane());
-        mostrar_organigrama.getContentPane().setLayout(mostrar_organigramaLayout);
-        mostrar_organigramaLayout.setHorizontalGroup(
-            mostrar_organigramaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        mostrar_organigramaLayout.setVerticalGroup(
-            mostrar_organigramaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
@@ -435,17 +346,24 @@ public class Gerente extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Mostrar el arbol", jPanel8);
 
-        jLabel15.setText("De");
+        jLabel15.setText("Destino");
 
-        jLabel16.setText("Para");
+        jLabel16.setText("Fuente");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        mensaje.setColumns(20);
+        mensaje.setRows(5);
+        jScrollPane1.setViewportView(mensaje);
 
         jLabel17.setText("Mensaje");
 
         jLabel18.setText("Broadcast");
+
+        jButton5.setText("Enviar");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -463,13 +381,18 @@ public class Gerente extends javax.swing.JFrame {
                                     .addComponent(jLabel16))
                                 .addGap(43, 43, 43)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox2, 0, 110, Short.MAX_VALUE))
+                                    .addComponent(combo12, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(combo13, 0, 110, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel18))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(53, 53, 53)
+                                .addComponent(jButton5)))))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -480,7 +403,7 @@ public class Gerente extends javax.swing.JFrame {
                         .addGap(16, 16, 16)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel15)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(combo12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -489,12 +412,17 @@ public class Gerente extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(combo13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addGap(77, 77, 77))))
         );
 
         jTabbedPane1.addTab("Enviar mensaje", jPanel9);
@@ -556,6 +484,12 @@ public class Gerente extends javax.swing.JFrame {
             DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) combito.getModel();
             modelo2.addElement(temp);
             combito.setModel(modelo2);
+            DefaultComboBoxModel modelo3 = (DefaultComboBoxModel) combo12.getModel();
+            modelo3.addElement(temp);
+            combo12.setModel(modelo2);
+            DefaultComboBoxModel modelo4 = (DefaultComboBoxModel) combo13.getModel();
+            modelo4.addElement(temp);
+            combo13.setModel(modelo2);
             nuevo_empleado.setVisible(false);
             nombre.setText("");
             id.setText("");
@@ -575,38 +509,6 @@ public class Gerente extends javax.swing.JFrame {
         nuevo_empleado.setLocationRelativeTo(this);
         nuevo_empleado.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        // TODO add your handling code here:
-        mostrar_organigrama.setVisible(false);
-    }//GEN-LAST:event_jButton4MouseClicked
-
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        // TODO add your handling code here:
-        Empleado temp;
-        String mat = jefes.getText();
-        DefaultComboBoxModel modelo = (DefaultComboBoxModel) combo_jefe.getModel();
-        if (modelo.getSelectedItem() instanceof Jefe) {
-            Jefe padre = mayores.get(mayores.indexOf((Jefe) modelo.getSelectedItem()));
-            temp = new Empleado(padre, mat);
-            padre.getJefes().add(temp);
-            modelo.addElement(temp);
-        } else {
-            Empleado padre = (Empleado) modelo.getSelectedItem();
-            temp = new Empleado(padre, mat);
-            padre.getHijos().add(temp);
-            modelo.addElement(temp);
-        }
-        combo_jefe.setModel(modelo);
-
-        if (mayores.size() > 0) {
-            Empleado tem = menores.get(0);
-            DefaultTreeModel m = (DefaultTreeModel) arbolito.getModel();
-            m.setRoot(new DefaultMutableTreeNode(temp));
-            llevar(tem, (DefaultMutableTreeNode) m.getRoot());
-
-        }
-    }//GEN-LAST:event_jButton6MouseClicked
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
         // TODO add your handling code here:
@@ -636,6 +538,8 @@ public class Gerente extends javax.swing.JFrame {
                 DefaultTreeModel m = (DefaultTreeModel) arbolito.getModel();
                 m.setRoot(new DefaultMutableTreeNode(temp));
                 llevar(temp, (DefaultMutableTreeNode) m.getRoot());
+            } else {
+
             }
         } catch (Exception e) {
 
@@ -646,7 +550,22 @@ public class Gerente extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         try {
-            Empleado temp;
+            DefaultTreeModel modelo = (DefaultTreeModel) arbolito.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
+            for (Jefe mayore : mayores) {
+                DefaultMutableTreeNode rai = new DefaultMutableTreeNode();
+                for (Empleado mayore1 : menores) {
+                    DefaultMutableTreeNode m = new DefaultMutableTreeNode();
+                    if (mayore1.getPadre() == mayore.getNombre()) {
+                        rai.add(m);
+                        raiz.add(rai);
+                        modelo.reload();
+
+                    }
+                }
+
+            }
+            /*Empleado temp;
             String mat = jefes.getText();
             DefaultComboBoxModel modelo = (DefaultComboBoxModel) combito.getModel();
             if (modelo.getSelectedItem() instanceof Jefe) {
@@ -660,12 +579,21 @@ public class Gerente extends javax.swing.JFrame {
                 padre.getHijos().add(temp);
                 modelo.addElement(temp);
             }
-            combito.setModel(modelo);
+            combito.setModel(modelo);*/
         } catch (Exception e) {
 
         }
 
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        if (mensaje.getText().equals(vacio)) {
+            JOptionPane.showMessageDialog(this, "Ingrese el mensaje");
+        } else {
+            JOptionPane.showMessageDialog(this, "Su mensaje se esta enviando, esto puede tardar unos minutos");
+        }
+    }//GEN-LAST:event_jButton5MouseClicked
 
     public void llevar(Empleado raiz, DefaultMutableTreeNode nodo) {
         try {
@@ -759,6 +687,8 @@ public class Gerente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolito;
     private javax.swing.JComboBox<String> combito;
+    private javax.swing.JComboBox<String> combo12;
+    private javax.swing.JComboBox<String> combo13;
     private javax.swing.JComboBox<String> combo_jefe;
     private javax.swing.JPasswordField contra;
     private javax.swing.JTextField empresa;
@@ -766,16 +696,11 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -793,17 +718,14 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jefes;
-    private javax.swing.JDialog mostrar_organigrama;
+    private javax.swing.JTextArea mensaje;
     private javax.swing.JTextField nombre;
     private javax.swing.JDialog nuevo_empleado;
     private javax.swing.JTextField puesto;
